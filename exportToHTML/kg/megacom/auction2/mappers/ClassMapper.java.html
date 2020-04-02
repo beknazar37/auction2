@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>ClassMapper.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ClassMapper.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">kg.megacom.auction2.mappers</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">kg.megacom.auction2.model.dto.*</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">kg.megacom.auction2.model.entity.*</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.mapstruct.Mapper</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.mapstruct.factory.Mappers</span><span class="s0">;</span>
+
+<span class="s1">@Mapper</span>
+<span class="s0">public interface </span><span class="s1">ClassMapper {</span>
+    <span class="s1">ClassMapper INSTANCES= Mappers.getMapper(ClassMapper.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">Bid bidDtoToBid (BidDto bidDto)</span><span class="s0">;</span>
+    <span class="s1">BidDto bidToBidDto (Bid bid)</span><span class="s0">;</span>
+
+    <span class="s1">Customer customerDtoToCustomer (CustomerDto customerDto)</span><span class="s0">;</span>
+    <span class="s1">CustomerDto customerToCustomerDto (Customer customer)</span><span class="s0">;</span>
+
+    <span class="s1">Lot lotDtoToLot (LotDto lotDto)</span><span class="s0">;</span>
+    <span class="s1">LotDto lotToLotDto (Lot lot)</span><span class="s0">;</span>
+
+    <span class="s1">Status statusDtoToStatus (StatusDto statusDto)</span><span class="s0">;</span>
+    <span class="s1">StatusDto statusToStatusDto (Status status)</span><span class="s0">;</span>
+
+    <span class="s1">User userDtoToUser (UserDto userDto)</span><span class="s0">;</span>
+    <span class="s1">UserDto userToUserDto (User user)</span><span class="s0">;</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
